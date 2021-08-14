@@ -1,3 +1,4 @@
+#!/bin/sh
 ##
 ## EPITECH PROJECT, 2021
 ## Prep
@@ -6,7 +7,7 @@
 ## for epitech students.
 ## Feel free to edit this file to your liking.
 ## All credits go to the creators of the following programs
-## Made by Philippe Cheype - Epitech Nice - PGE2025
+## Made by Philippe Cheype - Epitech Nsice - PGE2025
 ##
 ## Utilites needed:
 ##     NormEZ   - https://github.com/ronanboiteau/NormEZ/
@@ -18,19 +19,13 @@
 ##     alias €prep="[path to this file]"
 ##
 ## Last updated: 03/06/21
-##
-
-#######################################
-NORMEZ="$HOME/path/to/file/NormEZ.rb"
-DEHEADER="$HOME/path/to/file/deheader"
-#######################################
-
+##.
 
 
 clear
 if [ "$1" = "-f" ];
 then
-    make fclean -s
+    make fclean -s./
 else
     make fclean -s || { echo "\nEither you are not in a repo, or you are missing a Makefile\nStopping execution"; exit 1; }
 fi
@@ -114,9 +109,9 @@ then
     echo "\nDeheader done."
 else
     echo "Deheader is either not installed, corrupted or the path to the file is wrong."
-        echo "If you have not set the correct path check step 3 of installation on the github page:"
-        echo "> https://github.com/Philippe-cheype/Prep#3-setting-the-correct-paths"
-        echo "Or download the files if you have not done it yet:"
+    echo "If you have not set the correct path check step 3 of installation on the github page:"
+    echo "> https://github.com/Philippe-cheype/Prep#3-setting-the-correct-paths"
+    echo "Or download the files if you have not done it yet:"
     echo "> https://gitlab.com/esr/deheader/"
 fi
 echo "\nPrep finished.\nPress enter to exit..."
